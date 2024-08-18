@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="gmtk-204"
+config/name="GMTK 2024"
+run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
