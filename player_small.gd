@@ -11,6 +11,19 @@ extends CharacterBody2D
 
 func _physics_process(delta):
 	
+	if get_slide_collision_count():
+		for i in get_slide_collision_count():
+			var collision = get_slide_collision(i)
+			if collision.get_collider().is_in_group("lilbutton") and rad_to_deg(collision.get_angle()) > -50 and rad_to_deg(collision.get_angle()) < 50:
+				collision.get_collider().pressed = true
+				print(rad_to_deg(collision.get_angle()))
+			else:
+				for e in get_tree().get_nodes_in_group("lilbutton"):
+					e.pressed = false
+	else:
+		for e in get_tree().get_nodes_in_group("lilbutton"):
+			e.pressed = false
+	
 	
 	# Add the gravity.
 	if not is_on_floor():

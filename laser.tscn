@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://r2r1a2omfsbd"]
+
+[ext_resource type="Script" path="res://laser.gd" id="1_5b2qe"]
+[ext_resource type="Texture2D" uid="uid://cm7wxmnf7juwy" path="res://laser.png" id="1_cvmcg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h524v"]
+atlas = ExtResource("1_cvmcg")
+region = Rect2(0, 0, 16, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76j6m"]
+atlas = ExtResource("1_cvmcg")
+region = Rect2(16, 0, 16, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jjwh6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h524v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76j6m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqem4"]
+size = Vector2(8, 128)
+
+[node name="Laser" type="Area2D"]
+scale = Vector2(5, 5)
+script = ExtResource("1_5b2qe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jjwh6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dqem4")

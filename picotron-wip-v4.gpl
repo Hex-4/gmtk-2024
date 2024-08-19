@@ -1,0 +1,36 @@
+GIMP Palette
+#Palette Name: Picotron (WIP v4)
+#Description: A temporary palette for the&nbsp;<a href="https://www.lexaloffle.com/picotron.php" target="_blank">Picotron</a>&nbsp;fantasy console. The Picotron palette might change in the future, but this is the most recent revision currently existing.
+#Colors: 32
+0	0	0	000000
+126	37	83	7e2553
+195	0	46	c3002e
+255	0	77	ff004d
+255	102	0	ff6600
+255	163	0	ffa300
+255	236	39	ffec27
+255	255	125	ffff7d
+167	247	53	a7f735
+0	228	54	00e436
+0	178	81	00b251
+0	135	81	008751
+18	83	89	125359
+29	43	83	1d2b53
+10	98	190	0a62be
+41	173	255	29adff
+131	235	245	83ebf5
+255	241	232	fff1e8
+255	204	170	ffccaa
+212	142	111	d48e6f
+171	82	54	ab5236
+116	47	41	742f29
+66	33	54	422136
+95	52	126	5f347e
+219	55	184	db37b8
+255	119	168	ff77a8
+255	172	197	ffacc5
+189	154	223	bd9adf
+131	118	156	83769c
+95	87	79	5f574f
+162	136	121	a28879
+194	195	199	c2c3c7
