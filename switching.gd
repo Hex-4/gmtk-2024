@@ -1,7 +1,6 @@
 extends Node2D
 
-@onready var big = $Big
-@onready var small = $Small
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,11 +10,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("ui_focus_next"):
-		if big.selected == true:
-			big.selected = false
-			small.selected = true
+		if $Big.selected == true:
+			$Big.selected = false
+			$Small.selected = true
 			$Small/PhantomCamera2D.priority = 3
-		if small.selected == true:
-			small.selected = false
-			big.selected = true
+		elif $Small.selected == true:
+			$Small.selected = false
+			$Big.selected = true
+			$Small/PhantomCamera2D.priority = 0
 			

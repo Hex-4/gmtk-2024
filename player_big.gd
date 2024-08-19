@@ -7,7 +7,7 @@ extends CharacterBody2D
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 @export var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-var selected = true
+@onready var selected = true
 
 func _physics_process(delta):
 	

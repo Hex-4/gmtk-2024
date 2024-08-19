@@ -10,15 +10,15 @@
 
 [sub_resource type="Resource" id="Resource_m0v1r"]
 script = ExtResource("4_u0poj")
-duration = 1.0
-transition = 0
-ease = 2
+duration = 0.5
+transition = 5
+ease = 1
 
-[sub_resource type="Resource" id="Resource_y02k5"]
+[sub_resource type="Resource" id="Resource_43w1f"]
 script = ExtResource("4_u0poj")
-duration = 1.0
-transition = 0
-ease = 2
+duration = 0.5
+transition = 5
+ease = 1
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_cwq0s")
@@ -42,10 +42,14 @@ tween_on_load = false
 
 [node name="Small" parent="." instance=ExtResource("2_yqcy6")]
 position = Vector2(333, 411)
+scale = Vector2(0.1, 0.1)
 
-[node name="PhantomCamera2D" type="Node2D" parent="Small"]
+[node name="PhantomCamera2D" type="Node2D" parent="Small" node_paths=PackedStringArray("follow_target")]
 script = ExtResource("3_ddjhg")
-tween_resource = SubResource("Resource_y02k5")
+follow_mode = 2
+follow_target = NodePath("..")
+zoom = Vector2(10, 10)
+tween_resource = SubResource("Resource_43w1f")
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(0.1, 0.1)
