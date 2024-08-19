@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=55 format=3 uid="uid://cy27ab72ugxmt"]
+[gd_resource type="TileSet" load_steps=56 format=3 uid="uid://cy27ab72ugxmt"]
 
 [ext_resource type="Texture2D" uid="uid://cfsclla4lxhcx" path="res://prototype/checker_black_512x512.png" id="1_e1wno"]
 [ext_resource type="Texture2D" uid="uid://clsh41lkwyjma" path="res://prototype/checker_blue_512x512.png" id="2_q07yr"]
@@ -170,6 +170,8 @@ texture_region_size = Vector2i(512, 512)
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_k4eu8"]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vm4po"]
 texture = ExtResource("21_ntmmu")
 texture_region_size = Vector2i(512, 512)
@@ -250,3 +252,4 @@ sources/23 = SubResource("TileSetAtlasSource_exsqg")
 sources/24 = SubResource("TileSetAtlasSource_sflkf")
 sources/25 = SubResource("TileSetAtlasSource_83m3e")
 sources/26 = SubResource("TileSetAtlasSource_2s3vk")
+sources/27 = SubResource("TileSetScenesCollectionSource_k4eu8")
