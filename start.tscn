@@ -37,11 +37,9 @@ offset_bottom = 638.0
 text = "A game by hex4
 Made in 48 hours for the GMTK Game Jam 2024
 
-Font is mai10, by Antônio Lucas
+Arrow keys and Space to move
 
-Pallette is Picotron v4 by zep
-
-Made with Godot "
+R to restart, b for level select"
 label_settings = SubResource("LabelSettings_cebx1")
 autowrap_mode = 2
 
@@ -52,7 +50,7 @@ offset_top = 16.0
 offset_right = 538.0
 offset_bottom = 254.0
 text = "BIG SLIME,
-LIL SLIME"
+LIL' SLIME"
 label_settings = SubResource("LabelSettings_x3inw")
 
 [node name="Button" type="Button" parent="."]

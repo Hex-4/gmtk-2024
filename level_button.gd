@@ -11,4 +11,5 @@ func _process(delta):
 	pass
 	
 func openlevel():
+	Manager.level = int(str(name))
 	get_tree().change_scene_to_file("res://level_" + str(name) + ".tscn")

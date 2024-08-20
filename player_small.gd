@@ -9,6 +9,17 @@ extends CharacterBody2D
 
 @onready var selected = false
 
+var jump = preload("res://lil_jump.ogg")
+var impact = preload("res://lil_impact.ogg")
+
+var on_floor: bool:
+	set(value):
+		if on_floor == false and value == true:
+			if not $AudioStreamPlayer.playing:
+				$AudioStreamPlayer.stream = impact
+				$AudioStreamPlayer.play()
+		on_floor = value
+
 func _physics_process(delta):
 	
 	if get_slide_collision_count():
@@ -24,6 +35,7 @@ func _physics_process(delta):
 		for e in get_tree().get_nodes_in_group("lilbutton"):
 			e.pressed = false
 	
+	on_floor = is_on_floor()
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -32,6 +44,8 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and selected:
 		velocity.y = JUMP_VELOCITY
+		$AudioStreamPlayer.stream = jump
+		$AudioStreamPlayer.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

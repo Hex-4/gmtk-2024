@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bymi5c0oau3u3"]
+
+[ext_resource type="AudioStream" uid="uid://dnh4wog5at1un" path="res://Ethernight Club.mp3" id="1_81rqp"]
+
+[node name="DJ" type="AudioStreamPlayer"]
+stream = ExtResource("1_81rqp")
+volume_db = -3.0
+autoplay = true

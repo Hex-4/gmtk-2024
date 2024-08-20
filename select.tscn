@@ -94,6 +94,7 @@ text = "6"
 script = ExtResource("3_rnotj")
 
 [node name="7" type="Button" parent="hbox"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/h_separation = 0
@@ -103,6 +104,7 @@ text = "7"
 script = ExtResource("3_rnotj")
 
 [node name="8" type="Button" parent="hbox"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/h_separation = 0
@@ -112,6 +114,7 @@ text = "8"
 script = ExtResource("3_rnotj")
 
 [node name="9" type="Button" parent="hbox"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/h_separation = 0
@@ -121,6 +124,7 @@ text = "9"
 script = ExtResource("3_rnotj")
 
 [node name="10" type="Button" parent="hbox"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/h_separation = 0
@@ -131,6 +135,7 @@ text = "10
 script = ExtResource("3_rnotj")
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 22.0
 offset_top = 16.0
 offset_right = 370.0

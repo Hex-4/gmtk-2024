@@ -16,3 +16,5 @@ texture = ExtResource("2_dhtl7")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 scale = Vector2(2.29167, 2.29167)
 polygon = PackedVector2Array(-43.3333, 60, 43.3333, 60, 60, 43.3333, 60, 0, 30, -30, -30, -30, -60, 0, -60, 43.3333)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

@@ -6,9 +6,10 @@
 friction = 0.31
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ldicp"]
-size = Vector2(160, 162)
+size = Vector2(142, 146)
 
 [node name="Block" type="RigidBody2D" groups=["block"]]
+mass = 0.21
 physics_material_override = SubResource("PhysicsMaterial_p0iet")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
