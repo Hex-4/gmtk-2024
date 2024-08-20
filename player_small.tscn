@@ -3,10 +3,11 @@
 [ext_resource type="Script" path="res://player_small.gd" id="1_iml7f"]
 [ext_resource type="Texture2D" uid="uid://cnl51ebjuumdy" path="res://lilslime.png" id="2_dhtl7"]
 
-[node name="Small" type="CharacterBody2D"]
+[node name="Small" type="CharacterBody2D" groups=["smallplayer"]]
 scale = Vector2(0.3, 0.3)
 collision_mask = 3
 script = ExtResource("1_iml7f")
+JUMP_VELOCITY = -600.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(34.1667, 34.1667)

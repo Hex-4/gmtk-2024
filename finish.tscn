@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci4bcpagwj8ee"]
+
+[ext_resource type="Script" path="res://finish.gd" id="1_j1pu8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0pvpv"]
+size = Vector2(24, 896)
+
+[node name="Finish" type="Area2D"]
+script = ExtResource("1_j1pu8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0pvpv")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.516
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

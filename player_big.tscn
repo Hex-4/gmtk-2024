@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://player_big.gd" id="1_g2ug3"]
 [ext_resource type="Texture2D" uid="uid://8ifiewip4uff" path="res://bigslime.png" id="2_c37tg"]
 
-[node name="Big" type="CharacterBody2D"]
+[node name="Big" type="CharacterBody2D" groups=["bigplayer"]]
 script = ExtResource("1_g2ug3")
-JUMP_VELOCITY = -600.0
+JUMP_VELOCITY = -700.0
 gravity = 3000.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

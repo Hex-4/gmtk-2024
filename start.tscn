@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://15nfl7sm12sx"]
+
+[ext_resource type="FontFile" uid="uid://bstjqgd8lh2l0" path="res://mai10.ttf" id="1_vej8o"]
+[ext_resource type="Texture2D" uid="uid://cnl51ebjuumdy" path="res://lilslime.png" id="2_mug64"]
+[ext_resource type="Script" path="res://open_select.gd" id="3_uvxr5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cebx1"]
+font = ExtResource("1_vej8o")
+font_size = 22
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_x3inw"]
+line_spacing = -50.0
+font = ExtResource("1_vej8o")
+font_size = 60
+shadow_size = 26
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 3)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 595.0
+offset_top = 14.0
+offset_right = 1133.0
+offset_bottom = 638.0
+text = "A game by hex4
+Made in 48 hours for the GMTK Game Jam 2024
+
+Font is mai10, by Antônio Lucas
+
+Pallette is Picotron v4 by zep
+
+Made with Godot "
+label_settings = SubResource("LabelSettings_cebx1")
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 16.0
+offset_right = 538.0
+offset_bottom = 254.0
+text = "BIG SLIME,
+LIL SLIME"
+label_settings = SubResource("LabelSettings_x3inw")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 370.0
+offset_right = 471.0
+offset_bottom = 561.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("1_vej8o")
+theme_override_font_sizes/font_size = 76
+text = "Play"
+icon = ExtResource("2_mug64")
+alignment = 0
+icon_alignment = 2
+expand_icon = true
+script = ExtResource("3_uvxr5")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

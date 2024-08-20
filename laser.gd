@@ -21,3 +21,10 @@ func deactivate():
 	sprite.frame = 0
 	shape.disabled = false
 	
+
+
+func _on_body_entered(body):
+	if body.is_in_group("bigplayer") or body.is_in_group("smallplayer"):
+		get_tree().reload_current_scene()
+	elif body.is_in_group("block"):
+		body.queue_free()

@@ -1,0 +1,142 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci4fq7t0g3the"]
+
+[ext_resource type="FontFile" uid="uid://bstjqgd8lh2l0" path="res://mai10.ttf" id="1_cm5lk"]
+[ext_resource type="Script" path="res://open_start.gd" id="2_b2p4q"]
+[ext_resource type="Script" path="res://level_button.gd" id="3_rnotj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3i55t"]
+line_spacing = -50.0
+font = ExtResource("1_cm5lk")
+font_size = 60
+shadow_size = 26
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 3)
+
+[node name="Select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 73.0
+offset_right = 1049.0
+offset_bottom = 197.0
+theme_override_fonts/font = ExtResource("1_cm5lk")
+theme_override_font_sizes/font_size = 41
+text = "Back"
+script = ExtResource("2_b2p4q")
+
+[node name="hbox" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 277.0
+offset_right = 1024.0
+offset_bottom = 588.0
+alignment = 1
+
+[node name="1" type="Button" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("1_cm5lk")
+theme_override_font_sizes/font_size = 41
+text = "1"
+script = ExtResource("3_rnotj")
+
+[node name="2" type="Button" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("1_cm5lk")
+theme_override_font_sizes/font_size = 41
+text = "2"
+script = ExtResource("3_rnotj")
+
+[node name="3" type="Button" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("1_cm5lk")
+theme_override_font_sizes/font_size = 41
+text = "3"
+script = ExtResource("3_rnotj")
+
+[node name="4" type="Button" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("1_cm5lk")
+theme_override_font_sizes/font_size = 41
+text = "4"
+script = ExtResource("3_rnotj")
+
+[node name="5" type="Button" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("1_cm5lk")
+theme_override_font_sizes/font_size = 41
+text = "5"
+script = ExtResource("3_rnotj")
+
+[node name="6" type="Button" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("1_cm5lk")
+theme_override_font_sizes/font_size = 41
+text = "6"
+script = ExtResource("3_rnotj")
+
+[node name="7" type="Button" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("1_cm5lk")
+theme_override_font_sizes/font_size = 41
+text = "7"
+script = ExtResource("3_rnotj")
+
+[node name="8" type="Button" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("1_cm5lk")
+theme_override_font_sizes/font_size = 41
+text = "8"
+script = ExtResource("3_rnotj")
+
+[node name="9" type="Button" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("1_cm5lk")
+theme_override_font_sizes/font_size = 41
+text = "9"
+script = ExtResource("3_rnotj")
+
+[node name="10" type="Button" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("1_cm5lk")
+theme_override_font_sizes/font_size = 41
+text = "10
+"
+script = ExtResource("3_rnotj")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 16.0
+offset_right = 370.0
+offset_bottom = 254.0
+text = "LEVEL
+SELECT"
+label_settings = SubResource("LabelSettings_3i55t")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
